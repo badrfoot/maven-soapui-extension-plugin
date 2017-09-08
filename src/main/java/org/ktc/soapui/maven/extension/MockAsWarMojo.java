@@ -17,7 +17,7 @@
 
 package org.ktc.soapui.maven.extension;
 
-import static org.sonatype.aether.util.filter.DependencyFilterUtils.classpathFilter;
+import static org.eclipse.aether.util.filter.DependencyFilterUtils.classpathFilter;
 
 import com.eviware.soapui.tools.SoapUIMockAsWarGenerator;
 import java.io.File;
@@ -32,16 +32,16 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.ktc.soapui.maven.extension.impl.ProjectInfo;
 import org.ktc.soapui.maven.extension.impl.RunnerType;
 import org.ktc.soapui.maven.extension.impl.enums.EnumConverter;
-import org.sonatype.aether.RepositorySystem;
-import org.sonatype.aether.RepositorySystemSession;
-import org.sonatype.aether.collection.CollectRequest;
-import org.sonatype.aether.graph.Dependency;
-import org.sonatype.aether.repository.RemoteRepository;
-import org.sonatype.aether.resolution.ArtifactResult;
-import org.sonatype.aether.resolution.DependencyRequest;
-import org.sonatype.aether.resolution.DependencyResolutionException;
-import org.sonatype.aether.util.artifact.DefaultArtifact;
-import org.sonatype.aether.util.artifact.JavaScopes;
+import org.eclipse.aether.RepositorySystem;
+import org.eclipse.aether.RepositorySystemSession;
+import org.eclipse.aether.collection.CollectRequest;
+import org.eclipse.aether.graph.Dependency;
+import org.eclipse.aether.repository.RemoteRepository;
+import org.eclipse.aether.resolution.ArtifactResult;
+import org.eclipse.aether.resolution.DependencyRequest;
+import org.eclipse.aether.resolution.DependencyResolutionException;
+import org.eclipse.aether.artifact.DefaultArtifact;
+import org.eclipse.aether.util.artifact.JavaScopes;
 
 public class MockAsWarMojo extends AbstractSoapuiRunnerMojo {
     // for 2.2.x support, see http://docs.codehaus.org/display/MAVENUSER/Mojo+Developer+Cookbook
